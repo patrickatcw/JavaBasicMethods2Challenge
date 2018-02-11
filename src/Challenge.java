@@ -13,16 +13,46 @@
         -4 in all other cases
         -call both methods and display the results of the following;
         -a score of 1500, 900, 400, and 50*/
-
 public class Challenge {
 
     public static void main(String[] args) {
 
+        int positionInTheHighScoreTable = calculateHighScoreMethod(1500);
+        displayHighScoreMethod("JIm", positionInTheHighScoreTable);
 
+        positionInTheHighScoreTable = calculateHighScoreMethod(900);
+        displayHighScoreMethod("Sue", positionInTheHighScoreTable);
+
+        positionInTheHighScoreTable = calculateHighScoreMethod(400);
+        displayHighScoreMethod("Kurt", positionInTheHighScoreTable);
+
+        positionInTheHighScoreTable = calculateHighScoreMethod(50);
+        displayHighScoreMethod("Rose", positionInTheHighScoreTable);
+
+        positionInTheHighScoreTable = calculateHighScoreMethod(1300);
+        displayHighScoreMethod("Jeff", positionInTheHighScoreTable);
 
     }
 
+    public static void displayHighScoreMethod (String playersName, int positionInTheHighScoreTable) {
 
+        System.out.println(playersName + " managed to get into position " + positionInTheHighScoreTable +
+        " on the high score table");
+
+    }
+
+    public static int calculateHighScoreMethod(int playersScore) {
+
+        if (playersScore >= 1000)
+            return 1;
+        else if (playersScore >= 500 && playersScore < 1000)
+        return 2;
+        else if ((playersScore >= 100) && playersScore < 500)
+        return 3;
+        else
+            return 4;
+
+    }
 
 }
 
