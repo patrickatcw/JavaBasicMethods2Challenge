@@ -18,10 +18,10 @@ public class Challenge {
 
     public static void main(String[] args) {
 
-        int highScorePosition = calculateHighScorePosition(1500);
+        int highScorePosition = calculateHighScorePosition(1500);  //calling function and giving it to int value
         displayHighScorePosition("Tim", highScorePosition);
 
-        highScorePosition = calculateHighScorePosition(900);
+        highScorePosition = calculateHighScorePosition(900);        //redefining value
         displayHighScorePosition("Bob", highScorePosition);
 
         highScorePosition = calculateHighScorePosition(400);
